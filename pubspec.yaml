@@ -1,5 +1,5 @@
 name: menu_table_switch
-description: "A new Flutter plugin project."
+description: "This is a flutter package that allows you to display the menu in the form of a horizontally scrolling table."
 version: 0.0.1
 homepage:
 

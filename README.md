@@ -1,6 +1,6 @@
 # menu_table_switch
 
-About
+###### About :
 This is a flutter package that allows you to display the menu in the form of a horizontally scrolling table.
 
 ## Getting Started
