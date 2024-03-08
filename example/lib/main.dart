@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
 import 'package:menu_table_switch/menu_table_switch.dart';
 
 void main() {
@@ -16,48 +13,108 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
-  final _menuTableSwitchPlugin = MenuTableSwitch();
-
   @override
   void initState() {
     super.initState();
-    initPlatformState();
-  }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    // We also handle the message potentially returning null.
-    try {
-      platformVersion =
-          await _menuTableSwitchPlugin.getPlatformVersion() ?? 'Unknown platform version';
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-
-    setState(() {
-      _platformVersion = platformVersion;
-    });
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+            title: const Center(
+          child: Text(
+            'Menu table switch demo',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+          ),
+        )),
+        body: MenuTableSwitch(
+          menuItems: menus,
         ),
       ),
     );
   }
 }
+
+List<List<dynamic>> menus = [
+  [
+    'Pink',
+    Container(
+      color: Colors.pink,
+      child: const Center(
+          child: Text(
+        'Pink',
+        style: TextStyle(
+            fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+        textAlign: TextAlign.center,
+      )),
+    )
+  ],
+  [
+    'menu B',
+    Container(
+      color: Colors.black,
+      child: const Center(
+          child: Text(
+        'Black',
+        style: TextStyle(
+            fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+        textAlign: TextAlign.center,
+      )),
+    )
+  ],
+  [
+    'Orange',
+    Container(
+      color: Colors.orange,
+      child: const Center(
+          child: Text(
+        'Orange',
+        style: TextStyle(
+            fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+        textAlign: TextAlign.center,
+      )),
+    )
+  ],
+  [
+    'Green',
+    Container(
+      color: Colors.green,
+      child: const Center(
+          child: Text(
+        'Green',
+        style: TextStyle(
+            fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+        textAlign: TextAlign.center,
+      )),
+    )
+  ],
+  [
+    'Yellow',
+    Container(
+      color: Colors.yellow,
+      child: const Center(
+          child: Text(
+        'Yellow',
+        style: TextStyle(
+            fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+        textAlign: TextAlign.center,
+      )),
+    )
+  ],
+  [
+    'Brown',
+    Container(
+      color: Colors.brown,
+      child: const Center(
+          child: Text(
+        'Brown',
+        style: TextStyle(
+            fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+        textAlign: TextAlign.center,
+      )),
+    )
+  ],
+];
