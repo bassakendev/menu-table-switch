@@ -24,7 +24,7 @@ and the Flutter guide for
 
 **Menu table switch demo**
 
-![Demo of menu_table_switch package](https://github.com/bassakendev/menu-table-switch/assets/131482899/93a2126c-6da4-4356-be78-53f57d61be7b)
+![Demo of menu_table_switch package](https://github.com/bassakendev/menu-table-switch/assets/131482899/93a2126c-6da4-4356-be78-53f57d61be7b.mp4)
 
 ## Usage
 
