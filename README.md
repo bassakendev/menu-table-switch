@@ -5,16 +5,7 @@ This is a flutter package that allows you to display the menu in the form of a h
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-
+This package mainly has no requirements, and is suitable for all flutter platforms.
 
 <!--
 This README describes the package. If you publish this package to pub.dev,
@@ -29,29 +20,44 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+**Menu table switch demo**
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+![Demo of menu_table_switch package](https://github.com/bassakendev/menu_table_switch/blob/main/demo.mp4)
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+You can find a more complete example in to `/example/lib/main.dart` folder.
 
 ```dart
-const like = 'sample';
+import 'package:flutter/material.dart';
+import 'package:menu_table_switch/menu_table_switch.dart';
+
+class Example extends StatelessWidget {
+  const Example({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+          title: const Center(
+        child: Text(
+          'Menu table switch demo',
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+        ),
+      )),
+      body: MenuTableSwitch(
+        titles: const [], // Type List<String>. The size of the titles parameter must be equal to the size of the number of children in the children parameter
+
+        children: [], //The display order of the children of the children parameter must be the same as that of the title parameter, to display exactly the content corresponding to the title.
+      ),
+    );
+  }
+}
+
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+If you encounter any problems with the package, do not hesitate to send an email to bassakendev@gmail.com. If you wish to contribute to the package for improvements and other purposes, you can fork the package, your pull request will be examined and the result will be communicated to you by the email you left.
