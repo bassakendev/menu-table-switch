@@ -1,30 +1,73 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:menu_table_switch/menu_table_switch.dart';
-import 'package:menu_table_switch/menu_table_switch_method_channel.dart';
-import 'package:menu_table_switch/menu_table_switch_platform_interface.dart';
-import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-
-class MockMenuTableSwitchPlatform
-    with MockPlatformInterfaceMixin
-    implements MenuTableSwitchPlatform {
-
-  @override
-  Future<String?> getPlatformVersion() => Future.value('42');
-}
 
 void main() {
-  final MenuTableSwitchPlatform initialPlatform = MenuTableSwitchPlatform.instance;
-
-  test('$MethodChannelMenuTableSwitch is the default instance', () {
-    expect(initialPlatform, isInstanceOf<MethodChannelMenuTableSwitch>());
-  });
-
-  test('getPlatformVersion', () async {
-    MenuTableSwitch menuTableSwitchPlugin =
-        const MenuTableSwitch(menuItems: []);
-    MockMenuTableSwitchPlatform fakePlatform = MockMenuTableSwitchPlatform();
-    MenuTableSwitchPlatform.instance = fakePlatform;
-
-    expect(await menuTableSwitchPlugin.getPlatformVersion(), '42');
+  test('adds one to input values', () {
+    MenuTableSwitch(
+      titles: const ['Pink', 'Black', 'Orange', 'Green', 'yellow', 'Brown'],
+      children: [
+        Container(
+          color: Colors.pink,
+          child: const Center(
+              child: Text(
+            'Pink',
+            style: TextStyle(
+                fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+            textAlign: TextAlign.center,
+          )),
+        ),
+        Container(
+          color: Colors.black,
+          child: const Center(
+              child: Text(
+            'Black',
+            style: TextStyle(
+                fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+            textAlign: TextAlign.center,
+          )),
+        ),
+        Container(
+          color: Colors.orange,
+          child: const Center(
+              child: Text(
+            'Orange',
+            style: TextStyle(
+                fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+            textAlign: TextAlign.center,
+          )),
+        ),
+        Container(
+          color: Colors.green,
+          child: const Center(
+              child: Text(
+            'Green',
+            style: TextStyle(
+                fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+            textAlign: TextAlign.center,
+          )),
+        ),
+        Container(
+          color: Colors.yellow,
+          child: const Center(
+              child: Text(
+            'Yellow',
+            style: TextStyle(
+                fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+            textAlign: TextAlign.center,
+          )),
+        ),
+        Container(
+          color: Colors.brown,
+          child: const Center(
+              child: Text(
+            'Brown',
+            style: TextStyle(
+                fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white),
+            textAlign: TextAlign.center,
+          )),
+        )
+      ],
+    );
   });
 }
