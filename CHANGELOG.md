@@ -6,3 +6,6 @@
 
 ## 0.0.3
 * Add new variable (hoverColor) this variable replace color and does the same function. And the old variable color, define now the color the default text.
+
+## 0.0.4
+* Costum style.

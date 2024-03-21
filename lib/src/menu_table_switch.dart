@@ -104,7 +104,7 @@ class _MenuTableSwitchState extends State<MenuTableSwitch> {
                       border: Border(
                         bottom: BorderSide(
                           color: selectedIndex == index
-                              ? widget.color
+                              ? widget.hoverColor
                               : Colors.transparent,
                           width: 2.0,
                         ),
