@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 
 class MenuTableSwitch extends StatefulWidget {
+  final Color hoverColor;
   final Color color;
   final Curve curve;
   final int durationInMilliseconds;
@@ -15,7 +16,8 @@ class MenuTableSwitch extends StatefulWidget {
 
   const MenuTableSwitch({
     super.key,
-    this.color = Colors.blue,
+    this.hoverColor = Colors.blue,
+    this.color = Colors.black,
     this.curve = Curves.easeInOut,
     this.durationInMilliseconds = 500,
     this.height = 500,
@@ -115,8 +117,8 @@ class _MenuTableSwitchState extends State<MenuTableSwitch> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: selectedIndex == index
-                            ? widget.color
-                            : Colors.black,
+                            ? widget.hoverColor
+                            : widget.color,
                       ),
                     ),
                   ),
