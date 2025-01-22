@@ -27,7 +27,7 @@ and the Flutter guide for
 <!-- [Demo of menu_table_switch package](https://github.com/bassakendev/menu-table-switch/assets/131482899/d9f4c332-9940-476c-af87-4a6598a8cd10) -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Bassakendev/menu_table_switch/main/demo.gif?sanitize=true"/>
+  <img src="https://raw.githubusercontent.com/bassakendev/menu-table-switch/main/demo.gif?sanitize=true"/>
 </p>
 <h1 align="center"> 
   Easy ways to separe logic from UI in single screen
