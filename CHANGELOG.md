@@ -10,5 +10,8 @@
 ## 0.0.4
 * Costum style.
 
-## 0.0.5
+## 0.0.6
 * Add demo.gif to visual demonstration.
+
+## 0.0.7
+* Update documentation.
