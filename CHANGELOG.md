@@ -9,3 +9,6 @@
 
 ## 0.0.4
 * Costum style.
+
+## 0.0.5
+* Add demo.gif to visual demonstration.

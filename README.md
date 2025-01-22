@@ -30,7 +30,7 @@ and the Flutter guide for
   <img src="https://raw.githubusercontent.com/bassakendev/menu-table-switch/main/demo.gif?sanitize=true" width="200" height="500" />
 </p>
 <h1 align="center"> 
-  Easy ways to separate logic from UI in a single screen
+  Easy ways to separate logic from UI in a single screen 
 </h1>
 
 
